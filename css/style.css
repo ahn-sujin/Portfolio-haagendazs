@@ -65,7 +65,6 @@ button{outline: none;}
 #gnb>li>.sub_menu>li>a:hover{color:#691c32; font-weight: bold; }
 
 
-
 @media screen and (max-width:1200px){
     #header .inner{width:100%;}
     #header .inner .search{right:30px;}
@@ -79,23 +78,23 @@ button{outline: none;}
 }
 
 @media screen and (max-width:980px){
-    #header{height:100px;}
-    #header .logo{width:120px; height:60px; top:50%; }
+    #header{height:100px; }
+    #header .logo{width:120px; height:60px; top:50%; z-index: 0; }
     #header .header_bg{height:100px; background-image: none; }
 
     #header .inner button{border: none; background: none;}
-    #header .inner .toggle{opacity:1; display: block; font-size: 35px; color: #691c32; position: absolute; top:35%; right:2%;}
+    #header .inner .toggle{opacity:1; display: block; font-size: 35px; color: #691c32; position: absolute; top:35%; left:2%;}
     #header .nav_wrap .member .cancle{opacity:0; display: block; font-size: 35px; color: #fff; position: absolute; top:13%; left:5%; }
     #header .inner .toggle.on{opacity: 0;}
     #header .nav_wrap .member .cancle.on{opacity: 1;}
 
-    #header .inner .search{right:9%; top:39%; width:35px; height:35px; font-size:14px;} 
+    #header .inner .search{right:2%; top:39%; width:35px; height:35px; font-size:14px;} 
 
-    #header .nav_wrap{opacity: 0; transform: translateX(100%); transition: 0.5s;}
+    #header .nav_wrap{opacity: 0; transform: translateX(-100%); transition: 0.5s; z-index: 2;}
     #header .nav_wrap.on{opacity: 1; transform: translateX(0%);}
 
     #header .nav_wrap .etc{display: none;}
-    #header .nav_wrap{position: fixed; top:0px; right:0px; width: 300px; height:100%; background: #fff;}
+    #header .nav_wrap{position: fixed; top:0px; left:0px; width: 300px; height:100%; background: #fff;}
     #header .nav_wrap .member{top: 0px; left:0px; width:100%; height:70px; padding:30px 0; background: #691c32; }
     #header .nav_wrap .member li{float:right; padding-right:15px;} 
     #header .nav_wrap .member li>a{font-weight: 500;}
@@ -128,14 +127,15 @@ button{outline: none;}
 
 @media screen and (max-width:640px){
     #header{height:80px;}
-    #header .inner .search{right:12%;} 
+    #header .inner .toggle{top:30%; font-size: 30px;}
+    #header .logo{width:90px; height:45px; top:53%; }
 }
 
 @media screen and (max-width:480px){
     #header{height:60px;}
-    #header .logo{width:70px; height:35px; top:50%; }
-    #header .inner .toggle{top:30%; font-size: 25px;}
-    #header .inner .search{right:14%; top:36%;  width:25px; height:25px; font-size:12px;} 
+    #header .logo{width:70px; height:35px; top:56%; }
+    #header .inner .toggle{font-size: 25px;}
+    #header .inner .search{top:30%; width:30px; height:30px; font-size:13px;} 
 }
 
 
