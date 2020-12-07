@@ -6,6 +6,7 @@ $(function () {
         win_w = $(this).width();
         if(win_w >= 980){
             $('.gnb_wrap').removeAttr('style');
+            $('.sub_menu').removeAttr('style');
             $('.toggle').removeAttr('style');
             $('.cancle').removeAttr('style');
         }
@@ -59,11 +60,12 @@ $(function () {
             $('.gnb_wrap').addClass('on');
 
         } else{
-            $('#gnb>li').off('click');
-            $('#gnb>li').on('click',function(){
-                $(this).addClass('on').siblings().removeClass('on');
-                $('.sub_menu').stop().removeClass('on');
-                $(this).children('.sub_menu').addClass('on')
+            $('#gnb>li>a').off('click');
+            $('#gnb>li>a').on('click',function(){
+                $('.sub_menu').stop().slideUp();
+                $(this).next('.sub_menu').stop().slideToggle();
+                $(this).parents().addClass('on').siblings().removeClass('on');
+                
             });
         }
     });
@@ -80,6 +82,7 @@ $(function () {
         $('.nav_wrap').addClass('on');
         $('.toggle').addClass('on');
         $('.cancle').addClass('on');
+//        $('.').hide();
         
     });
 
@@ -99,8 +102,14 @@ $(function () {
         navigation: {
             nextEl: '#visual .swiper-button-next',
             prevEl: '#visual .swiper-button-prev',
+        },
+        autoplay: {
+            delay: 3000,
         }, 
     });
+
+
+
 /*---------flavor------------------------------------------------------*/      
     var mySwiper = new Swiper('#flavor .left_box', {
         loop: true,
