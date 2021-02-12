@@ -12,4 +12,4 @@ This site is the Haaagen-Dazs renewal site. (by ahn-sujin)
 * index : 홈_메인 페이지
 
 ## Contact 
-* :envelope:asj9674@gmail.com
+* :envelope: asj9674@gmail.com
